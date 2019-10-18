@@ -48,6 +48,7 @@ Next, you can see the default configuration in `.env` file:
 |Variable   |Default Value   |Description   |
 |:-:|:-:|---|
 |KAFKA_BROKER   |127.0.0.1:9092   |Kafka broker server  |
+|TOPIC  |none  |libcitisim topic subcriptions and kafka topic publish  |
 
 ### Advanced custom configuration
 

@@ -30,7 +30,9 @@ RUN tar --wildcards --strip-components=1 -xvf libcitisim-${LIBCITISIM_VER}.tar.g
     && rm -rf libcitisim-${LIBCITISIM_VER}.tar.gz requirements.txt
 
 COPY kafka-mirror ./
+COPY start.sh ./
 
 ENV KAFKA_BROKER=localhost:9092
 
-CMD ./kafka-mirror.py --kafka-cluster $KAFKA_BROKER
+#CMD /opt/citisim/kafka-mirror.py --kafka-cluster $KAFKA_BROKER --forward-topic $TOPIC
+CMD /opt/citisim/start.sh 
